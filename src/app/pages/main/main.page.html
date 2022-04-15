@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Pokedex</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item *ngFor="let item of data ">
+    <ion-grid (click)="details(item.name)">
+      <ion-row>
+        <ion-col size="4">
+            <img [src]="item.image" style="height: 60px; width: 60px;">
+        </ion-col>
+        <ion-col size="6">
+          <div style="margin-top: 18px; padding-left: 10px;">
+            {{item.name | titlecase}}
+          </div>  
+        </ion-col>
+        <ion-col size="2">
+         <div style="margin-top: 22px; text-align: right;">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div> 
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-list>
+
+<ion-infinite-scroll (ionInfinite)="pokemon(true,$event)">
+  <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+</ion-content>

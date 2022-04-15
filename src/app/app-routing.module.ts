@@ -15,6 +15,7 @@ const routes: Routes = [
     path: 'details/:name',
     loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
   },
+ 
   
   // {
   //   path: 'main',

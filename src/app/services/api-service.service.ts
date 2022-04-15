@@ -9,6 +9,7 @@ import {map} from 'rxjs/operators'
 export class ApiServiceService {
 url1:any='https://pokeapi.co/api/v2/pokemon/';
 url2: any='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
+url3 : any='https://pokeapi.co/api/v2/berry/'
   constructor(private http : HttpClient) { }
 
 
@@ -64,6 +65,10 @@ url2: any='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/poke
   searchResult(data){
     console.log(data)
     return this.http.get(this.url1+data);
+  }
+
+  berries(data){
+    return this.http.get(this.url3+data)
   }
 
 }

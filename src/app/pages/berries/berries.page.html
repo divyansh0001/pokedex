@@ -1,0 +1,177 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Berries</ion-title>
+    <ion-menu-button menu="mainMenu" slot="start"></ion-menu-button>
+
+  </ion-toolbar>
+ 
+</ion-header>
+<ion-toolbar>
+  <ion-searchbar placeholder="Enter Id" (ionChange)="searchResult($event)"></ion-searchbar>
+</ion-toolbar>
+
+<ion-content >
+
+
+  <ion-card *ngIf="data!=null">
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            ID
+          </ion-col>
+          <ion-col size="6" style="text-align: right;">
+            #{{data.id}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            name
+          </ion-col>
+          <ion-col size="6" style="text-align: right;">
+            {{data.name}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            Growth Time
+          </ion-col>
+          <ion-col size="6" style="text-align: right;">
+            {{data.growth_time}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            Size
+          </ion-col>
+          <ion-col size="6" style="text-align: right;">
+            {{data.size}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            Max Harvest
+          </ion-col>
+          <ion-col size="6" style="text-align: right;">
+            {{data.max_harvest}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            Smoothness
+          </ion-col>
+          <ion-col size="6" style="text-align: right;">
+            {{data.smoothness}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            Natural Gift Powder
+          </ion-col>
+          <ion-col size="6" style="text-align: right;">
+            {{data.natural_gift_power}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            Soil Dryness
+          </ion-col>
+          <ion-col size="6" style="text-align: right;">
+            {{data.soil_dryness}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-card>
+    <!-- </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            Weight
+          </ion-col>
+          <ion-col size="6" style="text-align: right;">
+            {{data.weight}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          Base Experince
+        </ion-col>
+        <ion-col size="6" style="text-align: right;">
+          {{data.base_experience}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          Order
+        </ion-col>
+        <ion-col size="6" style="text-align: right;">
+          {{data.order}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          Abilities
+        </ion-col>
+        <ion-col size="6" style="text-align: right;">
+          <div *ngFor="let item of data.abilities">
+              {{item.ability.name | titlecase}}
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  </ion-card>
+  <ion-card >
+    <ion-item >
+      <b>Moves</b>
+    </ion-item>
+    <ion-item *ngFor="let item of data.moves">
+        {{item.move.name | titlecase }}
+    </ion-item>
+  </ion-card>  -->
+</ion-content>

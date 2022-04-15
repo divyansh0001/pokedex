@@ -18,7 +18,7 @@ export class SearchPage implements OnInit {
   }
 
   searchResult(ev){
-    this.searchValue =ev.detail.value;
+    this.searchValue =(ev.detail.value).toLowerCase();
     console.log(this.searchValue)
     this.api.searchResult(this.searchValue).subscribe((res:any)=>{
       this.data=res;
